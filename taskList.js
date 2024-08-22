@@ -1,4 +1,4 @@
-// src/components/TaskList.js
+// TaskList.js
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTasks } from './taskAction';
