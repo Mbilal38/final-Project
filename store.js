@@ -1,0 +1,23 @@
+// store.js
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { taskReducer } from './taskReducers';
+import { userReducer } from './userReducers';
+
+const reducer = combineReducers({
+    tasks: taskReducer,
+    user: userReducer
+});
+
+const initialState = {};
+
+const middleware = [thunk];
+
+const store = createStore(
+    reducer,
+    initialState,
+    composeWithDevTools(applyMiddleware(...middleware))
+);
+
+export default store;
