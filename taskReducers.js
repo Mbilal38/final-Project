@@ -1,4 +1,4 @@
-// src/reducers/taskReducers.js
+// taskReducers.js
 import { GET_TASKS, CREATE_TASK } from './taskConstants';
 
 export const taskReducer = (state = { tasks: [] }, action) => {
